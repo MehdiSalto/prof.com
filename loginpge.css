@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: slideIn 2s ease;
+  }
+  @keyframes slideIn {
+    0%{opacity: 0;}
+    100%{opacity: 5;}
+    0%{transform: translateY(10%);}
+    100%{transform: translateY(0%);}
+  }
+
+body{
+  background-color: rgb(4, 45, 60);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+.logo{
+    width: 230px;
+    margin-top: -2%;
+    height: 230px;
+}
+
+.image{
+    width: 40%;
+    height: 40%;
+    position: relative;
+}
+
+.wrapper{
+    backdrop-filter: blur(16px);
+    position: relative;
+    width: 400px;
+    height: 630px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(255, 255, 255, 0.734);
+    border: 1px solid rgba(255, 255, 255, 0.805);
+    transition: height 0.5s ease;
+}
+
+.wrapper .form-box{
+    padding: 40px;
+    width: 100%;
+}
+
+.form-box h2{
+  font-size: 2em;
+  color: rgb(232, 232, 232);
+  font-family:'Times New Roman', Times, serif;
+  text-align: center;
+
+}
+
+
+
+
+form{
+  margin-bottom: 12px;
+}
+
+.input-box{
+  border-radius: 25px;
+  border-right: 2px solid yellow;
+  border-top: none;
+  border-left: none;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid yellow;
+  margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.3em;
+  color: aliceblue;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.6s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -5px;
+  left: 100px;
+}
+
+.input:invalid{
+  text-shadow: 0px 0px 20px red;
+  animation: chake 0.2s 2;
+}
+@keyframes chake{
+  25%{
+    translate: 6px 0;
+  }
+  50%{
+    translate:-6px 0;
+  }
+  75%{
+    translate: 6px 0;
+  }
+}
+
+.input-box input{
+  width: 100%;
+  height: 50px;
+  color: yellow;
+  font-size: large;
+  font-weight: 600;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  top: 0%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0 49px 0 8px;
+}
+
+.input-box .icon{
+  width: 30px;
+  position: absolute;
+  line-height: 57px;
+  right: 5px;
+  top: 5px;
+}
+
+#submit{
+  width: 90%;
+  height: 45px;
+  background: yellow;
+  color: rgb(0, 0, 0);
+  font-size: 1.3em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 20px;
+}
+p{
+  font-weight: 600;
+  font-size: 25px;
+  color: aliceblue;
+  border-radius: 20px;
+  padding: 12px;
+  border-left: 4px solid yellow;
+  border-right: 4px solid yellow;
+  backdrop-filter: blur(20px);
+}
